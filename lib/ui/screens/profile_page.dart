@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plants_app/constants.dart';
+import 'package:plants_app/ui/screens/myprofile.dart';
 import 'package:plants_app/ui/screens/widget/profile_widget.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -43,7 +44,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Row(
                   children: [
                     Text(
-                      'John Doe',
+                      'Dadang Korneto',
                       style: TextStyle(
                         color: Constants.blackColor,
                         fontSize: 20,
@@ -57,7 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               Text(
-                'johnDoe@gmail.com',
+                'iniemailsaya@gmail.com',
                 style: TextStyle(color: Constants.blackColor.withOpacity(.3)),
               ),
               const SizedBox(height: 30.0),
@@ -67,7 +68,20 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ProfileWidget(icon: Icons.person, title: 'My Profile'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MyProfilePage(),
+                          ),
+                        );
+                      },
+                      child: ProfileWidget(
+                        icon: Icons.person,
+                        title: 'My Profile',
+                      ),
+                    ),
                     ProfileWidget(icon: Icons.settings, title: 'Settings'),
                     ProfileWidget(
                       icon: Icons.notifications,
@@ -75,7 +89,34 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     ProfileWidget(icon: Icons.chat, title: 'FAQs'),
                     ProfileWidget(icon: Icons.share, title: 'Share'),
-                    ProfileWidget(icon: Icons.logout, title: 'Logout'),
+                    GestureDetector(
+                      onTap: () {
+                        // Tampilkan dialog konfirmasi logout
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Logout'),
+                              content: Text('Are you sure you want to logout?'),
+                              actions: [
+                                TextButton(
+                                  child: Text('Cancel'),
+                                  onPressed: () => Navigator.of(context).pop(),
+                                ),
+                                TextButton(
+                                  child: Text('Logout'),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                    // Tambahkan logic logout di sini
+                                  },
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
+                      child: ProfileWidget(icon: Icons.logout, title: 'Logout'),
+                    ),
                   ],
                 ),
               ),
