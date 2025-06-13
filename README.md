@@ -1,4 +1,4 @@
-# 🌱 Plant
+# 🌱 PlantPal
 
 Aplikasi untuk melihat tanaman
 
