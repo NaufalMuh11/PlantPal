@@ -1,14 +1,19 @@
-A new Flutter project.
+# 🌱 Plant
 
-## Getting Started
+Aplikasi untuk melihat tanaman
 
-This project is a starting point for a Flutter application.
+## 📦 Fitur
 
-A few resources to get you started if this is your first Flutter project:
+- Daftar tanaman
+- Menyimpan daftar tanaman
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📥 Unduh APK
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Klik di sini untuk mengunduh aplikasi](https://drive.google.com/file/d/1WjNl7-iCM7jIjkwFJLQtH7XLPU81KRDn/view?usp=drivesdk)
+
+## 🚀 Dibuat dengan
+
+- Flutter
+- Dart
+
+
